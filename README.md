@@ -3,15 +3,19 @@ https://github.com/JonathanDotCel/bootcard_igr
 # Credits
 
 Entirely based on nox's SD2PSXMAN test app:
+
 https://github.com/qnox32/sd2psxman-testing
+
 With thanks to both nox and El_isra!
 
 And reboot code from Based_skid:
+
 https://www.psx-place.com/resources/reboot-ps2.661/update?update=1062
 
 # License
 
 This is a personal project not officially endorsed by 8bm.
+
 See the license for more details.
 
 
@@ -22,9 +26,11 @@ An IGR (intergrated reset) binary, which will mount your default MCP2 boot card 
 You can use it 2 ways:
 
 1: Use it as your `IGR.ELF` for OPL
+
 OPL will launch it when you hit the IGR key combo, restart the MCP2, and then restart the PS2
 
 2: Install it as a FMCB menu item
+
 Scroll to it and hit `X` when FMCB starts to load your default boot card on the MCP2
 
 
@@ -33,11 +39,15 @@ Scroll to it and hit `X` when FMCB starts to load your default boot card on the 
 If you have a compatible USB stick, you can skip this section and go straight to the setup.
 
 The release zip contains the file `/PS2/mcp2igr/mcp2igr-1.mc2`
+
 You can mount this on your MCP2 (first slot) to copy the file to your OEM card (2nd slot):
+
 e.g. copy the folder onto your SD card and mount it.
+
 `sdcard:/PS2/mcp2igr/mcp2igr-1.mc2`
 
 From there, just open the regular Sony memcard browser and copy the file to the 2nd slot.
+
 You might also be able to use PCSX2, mymc++, etc to do this.
 
 You can remove this from your MCP2 when you're done, we're just using it to load the file.
@@ -114,6 +124,7 @@ Note: make sure it saves to `mc1` (oem card) or `mass`, if it says `mc0` (mcp2) 
 12: Hold `L1+R1+L2+R2+Start+Select`
 
 You should see a black screen with a bit of text, as the MCP2 loads the boot card, then the PS2 will reboot.
+
 If it's taking longer than about a second, something's up. Corrupt memory card, wrong path or something.
 
 # Option 2: As an FMCB menu item
