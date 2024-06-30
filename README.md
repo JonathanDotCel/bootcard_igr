@@ -1,3 +1,5 @@
+https://github.com/JonathanDotCel/bootcard_igr
+
 # Credits
 
 Entirely based on nox's SD2PSXMAN test app:
@@ -78,21 +80,37 @@ Open uLaunchElf's file browser, navigate to
 # Option 1: OPL's IGR feature
 
 1: Have the `igr` folder/item on your OEM memcard in the 2nd slot, or on your USB stick.
+
 2: Boot into OPL
+
 3: Hit `Start` to bring up the settings (Not `Tri`)
+
 4: Select the top item in the list: `Settings`
+
 5: Scroll down to `IGR Path` and enter e.g:
+
 `mass:/igr/igr.elf` <-- USB
+
 `mc0:/igr/igr.elf`  <-- left slot, use the other one:
+
 `mc1:/igr/igr.elf`  <-- right slot
+
 Note: if you're not sure about paths, you can use uLaunchElf or wLaunchElf to explore
+
 6: Hit `Start`
+
 7: Scroll down to `OK`
+
 8: Scroll down to `Save Changes` 
+
 Note: make sure it saves to `mc1` (oem card) or `mass`, if it says `mc0` (mcp2) OPL won't find settings when you mount different VMCs.
+
 9: Hit `Circle` to return to your game list
+
 10: Launch a game
+
 11: Get to a part where the game is listening for pad input (cutscene, gameplay, menu - generally not loading screens)
+
 12: Hold `L1+R1+L2+R2+Start+Select`
 
 You should see a black screen with a bit of text, as the MCP2 loads the boot card, then the PS2 will reboot.
@@ -102,19 +120,37 @@ If it's taking longer than about a second, something's up. Corrupt memory card, 
 
    
 1: Fire up FMCB
+
 2: Go to `Free MCBoot Configurator` (usually at the bottom)
+
 3: Pick `X` or `O`
-4: `Load CNF From Mass` or `Load CNF from MC1` (whichever has your current settings)
+
+4: `Load CNF From Mass` or `Load CNF from MC1` 
+
+(whichever has your current settings)
+
 5: Scroll down to `Configure OSDSYS options...`
+
 6: Scroll down to `Configure item 1:`
+
 7: Scroll `right` to a blank entry and hit `X` or `O` (whichever you chose)
-8: Set the name to whatever (e.g. `Boot MC` - cancel button is backspace, square is space)
+
+8: Set the name to whatever 
+
+(e.g. `Boot MC` - cancel button is backspace, square is space)
+
 9: Scroll down to `Path 1`
+
 10: Select e.g. `mass:/igr/igr.elf`
+
 11: Scroll down to `Return`
+
 12: Scroll down to `Return` once more
+
 13: Scroll down to `Save CNF to Mass` or `Save CNF to MC1` (or both)
+
 14: Reboot
+
 
 You can now select e.g. `Boot MC` from FMCB to boot your defualt MCP2 boot card.
 
